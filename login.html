@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" href="Assets/icon.png" type="image/png">
+    <script type="module" src="login.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Login | PassMyBook</title>
+</head>
+<body>
+    <div>
+        <sec class="header">
+            <nav>
+                <a href="./index.html"><img src="./Assets/logo.png" class="logo"></a>
+                <ul id="nav-item">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="books.html"> Buy Books</a></li>
+                    <li><a href="upload.html">Sell Books</a></li>
+                    <li><a href="test.html">Online Test</a></li>
+                    <li><a class="def-shad" href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </sec>
+    </div>
+      <div class="container">
+        <div class="box">
+            <div class="header">
+                <!-- <header> <img src="images/logo.png" alt=""></header> -->
+                <p><img src="Assets/icon.png" class="login-logo">Login | PassMyBook</p>
+            </div>
+            <div class="input-box">
+                <label for="email">E-Mail</label>
+                <input type="email" class="input-field" id="login_email" placeholder="Enter Your Email Address" required>
+                <i class="bx bx-envelope"></i>
+            </div>
+            <div class="input-box">
+                <label for="pass">Password</label>
+                <input type="password" class="input-field" id="login_pass" placeholder="Enter Your Password" required>
+                <i class="bx bx-lock"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" id="login" class="input-submit" value="LOGIN">
+            </div>
+            <div class="forgot">
+                <span><a href="signup.html" class="signup">Sign Up</a></span>
+                <!-- <span><a id="logout" class="signup">Log Out</a></span> -->
+                <span>Forgot Password?</span>
+            </div>
+        </div>
+        <div class="wrapper"></div>
+      </div>
+      <footer class="footer">
+        <div>
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="books.html">Buy Books</a></li>
+                        <li><a href="#">Sell Books</a></li>
+                        <li><a href="test.html">Online Test</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </footer>
+</body>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-analytics.js";
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDq-H-07Na07z-DQGfm2ZAJjiuWjd3tBiA",
+    authDomain: "passmyb.firebaseapp.com",
+    projectId: "passmyb",
+    storageBucket: "passmyb.appspot.com",
+    messagingSenderId: "393138791788",
+    appId: "1:393138791788:web:b6d2f1cfe3f54eaedbff49",
+    measurementId: "G-QK75DTBDXL"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+    const auth = getAuth();
+    console.log(app)
+
+    //----- Login code start	  
+	  document.getElementById("login").addEventListener("click", function() {
+		  var email =  document.getElementById("login_email").value;
+		  var password = document.getElementById("login_pass").value;
+
+		  signInWithEmailAndPassword(auth, email, password)
+		  .then((userCredential) => {
+		    // Signed in 
+		    const user = userCredential.user;
+		    console.log(user);
+		    alert("You Have Successfully Logined on PassMyBook!!!");
+		    document.getElementById('logout').style.display = 'block';
+		    // ...
+		  })
+		  .catch((error) => {
+		    const errorCode = error.code;
+		    const errorMessage = error.message;
+		    console.log(errorMessage);
+		    alert(errorMessage);
+		  });		  		  
+	  });
+	  //----- End
+
+	  //----- Logout code start	  
+	//   document.getElementById("logout").addEventListener("click", function() {
+	// 	  signOut(auth).then(() => {
+	// 		  // Sign-out successful.
+	// 		  console.log('Sign-out Successful.');
+	// 		  alert('Sign-out Successful.');
+	// 		  document.getElementById('logout').style.display = 'none';
+	// 		}).catch((error) => {
+	// 		  // An error happened.
+	// 		  console.log('An Error Happened.');
+	// 		});		  		  
+	//   });
+	  //----- End
+</script>
+</html>

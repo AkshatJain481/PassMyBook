@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Book | PassMyBook</title>
+    <link rel="stylesheet" href="upload.css">
+    <link rel="icon" href="Assets/icon.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+    <div>
+        <section class="header">
+            <nav>
+                <a href="./index.html"><img src="./Assets/logo.png" class="logo"></a>
+                <ul id="nav-item">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="books.html"> Buy Books</a></li>
+                    <li><a class="def-shad" href="upload.html">Sell Books</a></li>
+                    <li><a href="test.html">Online Test</a></li>
+                    <li><a class="def-shad" href="signup.html">Sign Up</a></li>
+                </ul>
+            </nav>
+        </section>
+    </div>
+    <br><br>
+    <div class="main_heading" >
+        <h1>Upload Details for Book</h1><br><hr><br><br>
+        <form action="https://formsubmit.co/fce0a1ac3e14be0a3e3a0887066535f4" method="POST"><p><ol>
+            <li class="book_details">Name of the Book<input type="text" name="Book Name" class="book_name" placeholder="Enter Your Book Name" required></li>
+            <li class="book_details">Author of the Book<input type="text" name="Book Author" class="book_author" placeholder="Enter Name of Book's Author" required></li>
+            <li class="book_details">Actual Price of the Book<input type="number" name="Actual Price" class="book_actprice" placeholder="Enter Actual Price of the Book" required></li>
+            <li class="book_details">Selling Price of the Book<input type="number" name="Sell Price" class="book_sellprice" placeholder="Enter Selling Price of the Book" required></li>
+            <li class="book_details">Condition of the Book<input type="text" name="Book Condition" class="book_cond" placeholder="Specify the Condition of the Book" required></li>
+            <li class="book_details">Description of the Book<input type="text" name="Book Description" class="book_desc" placeholder="Describe What the Book is About, and How's It Useful in Under 200 Words" required></li>
+            <li class="book_details">Upload Image of the Book<figure class="image-container"><img id="chosen-image"><figcaption class="file-name"></figcaption></figure><input type="file" name="Book Image" id="upload-button" accept="image/*" required><div id="display-image"></div><label for="upload-button" class="book_btn"><i class="fas fa-upload"></i> &nbsp; Choose a Photo</label></li>
+        </ol></p>
+        <button type="submit" class="submit-btn">SUBMIT</button><br><br><br>
+    </form></div>
+  <footer class="footer">
+    <div>
+        <div class="row">
+            <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">our services</a></li>
+                    <li><a href="#">privacy policy</a></li>
+                    <li><a href="#">affiliate program</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">shipping</a></li>
+                    <li><a href="#">returns</a></li>
+                    <li><a href="#">order status</a></li>
+                    <li><a href="#">payment options</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="books.html">Buy Books</a></li>
+                    <li><a href="upload.html">Sell Books</a></li>
+                    <li><a href="test.html">Online Test</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="upload.js"></script>
+</body>
+</html>
