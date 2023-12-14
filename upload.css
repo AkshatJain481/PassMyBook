@@ -7,9 +7,20 @@
     font-family: 'Poppins', sans-serif;
     /* font-weight: 600; */
 }
+.back-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -2;
+}
 body{
-    /* background: url(images/bg.png); */
    background-size: cover;
+   background-position: center;
 }
 .container{
     display: flex;
@@ -19,14 +30,15 @@ body{
     position: relative;
 }
 nav{
-    width: 100%;
-    height: 75px;
-    background-color: #fff;
-    box-shadow: 0px 0px 15px rgba(4,9,30,0.2);
-    display: flex;
-    position: fixed;
     z-index: 1;
+    width: 100%;
+    height: 80px;
     padding: 10px;
+    display: flex;
+    /* position: fixed; */
+    backdrop-filter: blur(10px);
+    background-color: transparent;
+    box-shadow: 0px 0px 15px rgba(4,9,30,0.2);
 }
 #nav-item{
     margin-top: -9px;
@@ -59,25 +71,33 @@ nav ul li{
 nav ul li a{
     display: block;
     padding: 0 40px;
-    color: #000;
-    text-decoration: none;
+    color: #fff;
     transition: 0.1s;
+    text-transform: uppercase;
+    text-decoration: none;
+    animation: slideDown 1s ease-in-out;
 }
 
 .def-shad{
-    background-color: rgba(4, 9, 30, 0.1);
     border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255,255,255,0.2);
     padding: 15px 40px 15px 40px;
 }
 
-.login{
+/* .login{
   background-color: rgba(249, 232, 3, 0.64);
   border-radius: 10px;
   padding: 15px 40px 15px 40px;
-}
+} */
 
 nav ul li a:hover{
-    background-color: rgba(4, 9, 30, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255,255,255,0.2);
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.3);
     border-radius: 10px;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -89,7 +109,7 @@ nav ul li a:hover{
 
 div h1{
     font-size: 35px;
-    color: #000;
+    color: #fff;
     text-align: center;
 }
 
@@ -99,6 +119,7 @@ div h1{
     margin-left: 5%;
     margin-right: 5%;
     padding-bottom: 40px;
+    color: #fff;
 }
 
 .book_name{
@@ -310,3 +331,44 @@ label{
       width: 100%;
   }
   }
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
