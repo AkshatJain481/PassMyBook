@@ -12,6 +12,9 @@
 .container{
     width: 100%;
     height: 100vh;
+    background-size: cover;
+  background-position: center;
+  background: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5));
 }
 
 html{
@@ -21,7 +24,8 @@ html{
 nav{
     width: 100%;
     height: 75px;
-    background-color: #fff;
+    backdrop-filter: blur(10px);
+    background-color: transparent;
     box-shadow: 0px 0px 15px rgba(4,9,30,0.2);
     display: flex;
     /* position: fixed; */
@@ -34,10 +38,11 @@ nav{
 }
 
 .logo{
-    width: 260px;
-    height: 70px;
-    margin-top: -5px;
-    cursor: pointer; 
+    width: 250px;
+  height: 60px;
+  margin-top: -5px;
+  cursor: pointer;
+  margin-left: -10px;
 }
 
 nav ul{
@@ -52,24 +57,34 @@ nav ul li{
 }
 
 nav ul li a{
-    display: block;
-    padding: 0 40px;
-    color: #000;
-    text-decoration: none;
-    transition: 0.1s;
+  display: block;
+  padding: 0 40px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.1s;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  animation: slideDown 1s ease-in-out;
 }
 
 .def-shad{
-    background-color: rgba(4, 9, 30, 0.1);
     border-radius: 10px;
-    padding: 15px 40px 15px 40px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 15px 40px 15px 40px;
 }
 
 nav ul li a:hover{
-    background-color: rgba(4, 9, 30, 0.1);
-    border-radius: 10px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .book-img{
@@ -81,15 +96,11 @@ nav ul li a:hover{
 }
 
 .book-desc{
-    margin: 0 2%;
+    margin: -3% 2%;
     font-size: 1.2rem;
+    color: #fff;
 }
 
-.login{
-    background-color:  rgba(4, 9, 30, 0.3);
-    border-radius: 10px;
-    padding: 15px 40px 15px 40px;
-  }
 
 button{
     background-color: #fff;
@@ -103,7 +114,14 @@ button{
 }
 
 button:hover{
-    background-color: rgba(4, 9, 30, 0.1);
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    padding: 12px 24px;
+    transition: 0.1s all;
+    font-size: 18px;
+    border: 1px solid rgba(4, 9, 30, 0.3);
+    border-radius: 10px;
     padding: 15px 24px 15px 24px;
     border: 1px solid rgba(4, 9, 30, 0.1);
     border-radius: 10px;

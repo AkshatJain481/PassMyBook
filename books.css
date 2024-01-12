@@ -28,7 +28,10 @@
 /*To set the background position*/
 .container {
   width: 100%;
-  height: 100vh;
+  height: 180vh;
+  background-size: cover;
+  background-position: center;
+  background: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5));
 }
 
 html {
@@ -53,10 +56,11 @@ nav {
 }
 
 .logo {
-  width: 260px;
-  height: 70px;
+  width: 250px;
+  height: 60px;
   margin-top: -5px;
   cursor: pointer;
+  margin-left: -10px;
 }
 
 nav ul {
@@ -116,6 +120,11 @@ nav ul li a:hover {
 .table_row {
   padding-bottom: 5%;
   cursor: pointer;
+  color: #ffff;
+}
+
+.table_row2{
+  color: #fff;
 }
 
 .table_row2 {
@@ -236,10 +245,10 @@ td img {
 }
 
 td:hover {
-  color: black;
   box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.7);
   /* box-shadow: 0 0 20px 0 rgba(4, 9, 30, 0.7); */
 }
+
 
 td h3 {
   margin-top: 20px;

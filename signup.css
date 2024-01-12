@@ -8,20 +8,25 @@
     /* font-weight: 600; */
 }
 body{
-    /* background: url(images/bg.png); */
-   background-size: cover;
+    background-size: cover;
+    background-position: center;
 }
 .container{
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 100%;
     min-height: 100vh;
     position: relative;
+    background-size: cover;
+  background-position: center;
+  background: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5));
 }
 nav{
     width: 100%;
-    height: 75px;
-    background-color: #fff;
+    height: 80px;
+    backdrop-filter: blur(10px);
+    background-color: transparent;
     box-shadow: 0px 0px 15px rgba(4,9,30,0.2);
     display: flex;
     /* position: fixed; */
@@ -34,10 +39,11 @@ nav{
 }
 
 .logo{
-    width: 260px;
-    height: 70px;
-    margin-top: -5px;
-    cursor: pointer; 
+    width: 250px;
+  height: 60px;
+  margin-top: -5px;
+  cursor: pointer;
+  margin-left: -10px;
 }
 
 .login-logo{
@@ -58,16 +64,23 @@ nav ul li{
 
 nav ul li a{
     display: block;
-    padding: 0 40px;
-    color: #000;
-    text-decoration: none;
-    transition: 0.1s;
+  padding: 0 40px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.1s;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  animation: slideDown 1s ease-in-out;
 }
 
 .def-shad{
-    background-color: rgba(4, 9, 30, 0.1);
-    border-radius: 10px;
-    padding: 15px 40px 15px 40px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 15px 40px 15px 40px;
 }
 
 /* .login{
@@ -77,13 +90,15 @@ nav ul li a{
 } */
 
 nav ul li a:hover{
-    background-color: rgba(4, 9, 30, 0.1);
-    border-radius: 10px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 .wrapper{
-    margin-top: 7%;
     position: absolute;
     width: 455px;
     height: 485px;
@@ -94,7 +109,7 @@ nav ul li a:hover{
                 -2px -0px 15px 2px rgba(0, 0, 0, 0.054);
 }
 .box{
-    margin-top: 7%;
+    margin-top: 10px;
     width: 450px;
     height: 480px;
     background: #fff;

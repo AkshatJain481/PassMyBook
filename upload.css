@@ -28,6 +28,9 @@ body{
     align-items: center;
     min-height: 100vh;
     position: relative;
+    background-size: cover;
+    background-position: center;
+    background: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5));
 }
 nav{
     z-index: 1;

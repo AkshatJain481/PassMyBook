@@ -19,7 +19,6 @@ body {
   height: 110vh;
   background-size: cover;
   background-position: center;
-  /* box-shadow: 0 0 20px 0 rgba(4, 9, 30, 0.7); */
   background: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5));
 }
 
@@ -52,14 +51,16 @@ nav {
 }
 
 #nav-item {
-  margin-top: -9px;
+  margin-top: -14px;
   margin-left: 130px;
 }
 
 .logo {
-  width: 280px;
-  height: 70px;
+  width: 250px;
+  height: 60px;
   cursor: pointer;
+  margin-top: -5px;
+  margin-left: -10px;
 }
 
 nav ul {
